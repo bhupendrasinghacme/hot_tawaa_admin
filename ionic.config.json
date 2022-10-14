@@ -1,0 +1,7 @@
+{
+  "name": "hot_tawaa_admin",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
