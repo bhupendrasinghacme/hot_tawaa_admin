@@ -11,6 +11,10 @@ const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full'
   },
+  {
+    path: 'open-review',
+    loadChildren: () => import('./open-review/open-review.module').then( m => m.OpenReviewPageModule)
+  },
 ];
 
 @NgModule({
