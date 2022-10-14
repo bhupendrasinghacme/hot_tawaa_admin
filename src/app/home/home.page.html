@@ -9,7 +9,11 @@
 <ion-content [fullscreen]="true">
   <ion-list id="container" *ngIf="data_reciever != undefined && data_reciever.length >0">
     <ion-item *ngFor="let data_item of data_reciever" (click)="previewReview(data_item)">
-      <ion-label>{{ data_item.data.name }}</ion-label>
+      <ion-card style="width:100%">
+        <ion-card-content>
+          <ion-label>{{ data_item.data.name }}</ion-label>
+        </ion-card-content>
+      </ion-card>
     </ion-item>
   </ion-list>
 </ion-content>

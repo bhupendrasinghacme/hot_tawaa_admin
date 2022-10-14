@@ -1,9 +1,84 @@
 <ion-header>
   <ion-toolbar>
-    <ion-title>Preview App</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Review Details</ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="5" offset="1">
+        <ion-text>
+          <h5>Name:</h5>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text>
+          <p>
+            {{ reviewDetails.data.name }}
+          </p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5" offset="1">
+        <ion-text>
+          <h5>Email:</h5>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text>
+          <p>
+            {{ reviewDetails.data.email }}
+          </p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5" offset="1">
+        <ion-text>
+          <h5>Food Review:</h5>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text>
+          <p>
+            {{ reviewDetails.data.rewiew_star }}
+          </p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="5" offset="1">
+        <ion-text>
+          <h5>Service Review:</h5>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text>
+          <p>
+            {{ reviewDetails.data.service_star }}
+          </p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+    <ion-row *ngIf="reviewDetails.data.service_star != ''">
+      <ion-col size="5" offset="1">
+        <ion-text>
+          <h5>Mobile:</h5>
+        </ion-text>
+      </ion-col>
+      <ion-col size="6">
+        <ion-text>
+          <p>
+            {{ reviewDetails.data.mobile }}
+          </p>
+        </ion-text>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 </ion-content>

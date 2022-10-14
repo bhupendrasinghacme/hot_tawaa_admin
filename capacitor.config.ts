@@ -1,8 +1,8 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'hot_tawaa_admin',
+  appId: 'io.hot_tawaa.admin',
+  appName: 'Hot Tawaa Admin',
   webDir: 'www',
   bundledWebRuntime: false
 };
